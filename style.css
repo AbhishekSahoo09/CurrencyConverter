@@ -1,0 +1,96 @@
+
+body{
+    background-color: black;
+}
+header{
+    background-color: #8000ff;
+    height: 70px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    margin: 0px;
+}
+.margin{
+    margin: 200px;
+    margin-left: 550px;
+    margin-right: 572px;
+    margin-top: 140px;
+    margin-bottom: 150px;
+}
+
+footer{
+    background-color: #8000ff;
+    height: 70px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    margin: 0px;
+}
+.amount{
+    width: 98%;
+    height: 30px;
+    border-radius: 0.5rem;
+}
+.dropdowm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.hel{
+    width: 100%;
+    border-radius: 0.5rem;
+    height: 25px ;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.boarder-box{
+    width: 25vw;
+    color: aliceblue;
+    background-color:black; 
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    position: relative;
+    border-radius: 10px;
+}
+.boarder-box::after,.boarder-box::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent 50%,#8000ff);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.boarder-box::before{
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+.hr{
+    color: black;
+}
+.hr:hover {
+    text-decoration: underline;
+}
